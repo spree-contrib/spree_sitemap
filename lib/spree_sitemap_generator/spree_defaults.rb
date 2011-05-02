@@ -1,6 +1,6 @@
 module SpreeSitemapGenerator::SpreeDefaults
   def default_url_options
-    {:host => URI.parse(SitemapGenerator::Sitemap.default_host).host}
+    {:host => "http://" + Spree::Config[:site_url]}
   end 
   include ::Rails.application.routes.url_helpers
 
