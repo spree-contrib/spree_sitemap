@@ -25,7 +25,7 @@ module SpreeSitemapGenerator
       SitemapGenerator::Sitemap.default_host = "http://#{Spree::Config[:site_url]}"
 
       require 'spree_sitemap_generator/spree_defaults'
-      SitemapGenerator::LinkSet.send :include, SpreeSitemapGenerator::SpreeDefaults
+      SitemapGenerator::Interpreter.send :include, SpreeSitemapGenerator::SpreeDefaults
 
       Dir.glob(File.join(File.dirname(__FILE__), "../app/**/*_decorator*.rb")) do |c|
         Rails.env.production? ? require(c) : load(c)
