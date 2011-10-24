@@ -1,6 +1,6 @@
 module SpreeSitemapGenerator::SpreeDefaults
   def default_url_options
-    {:host => "http://" + Spree::Config[:site_url]}
+    {:host => SitemapGenerator::Sitemap.default_host}
   end 
   include ::Rails.application.routes.url_helpers
 
@@ -17,7 +17,7 @@ module SpreeSitemapGenerator::SpreeDefaults
   end
 
   def add_password_reset(options={})
-    add(new_password_reset_path, options)
+    add(new_user_password_path, options)
   end
 
   def add_products(options={})

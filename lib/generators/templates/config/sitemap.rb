@@ -1,3 +1,5 @@
+SitemapGenerator::Sitemap.default_host = "http://#{Spree::Config[:site_url]}"
+
 SitemapGenerator::Sitemap.add_links do |sitemap|
   # Put links creation logic here.
   #
