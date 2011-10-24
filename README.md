@@ -22,7 +22,7 @@ Installation
 
 `echo "public/sitemap*" >> .gitignore`
 
-5) setup a daily job to regenrate your sitemap via the `rake sitemap:refresh` task. If you use the Whenever gem, add this to your `config/schedule.rb`
+5) setup a daily cron job to regenrate your sitemap via the `rake sitemap:refresh` task. If you use the Whenever gem, add this to your `config/schedule.rb`
 
 ```
 every 1.day, :at => '5:00 am' do
@@ -30,7 +30,7 @@ every 1.day, :at => '5:00 am' do
 end
 ```
 
-6) add the following line to your `robots.txt` with your correct domain name
+6) make sure crawlers can find the sitemap, by adding the following line to your `public/robots.txt` with your correct domain name
 
 `echo "Sitemap: http://www.example.com/sitemap_index.xml.gz" >> public/robots.txt`
 
@@ -57,6 +57,6 @@ Features
 Special Thanks
 =====
 - The creators of the sitemap_generator gem
-- To all who have provided pull requests, its is much appreciated
+- jackkinsella
 
 Copyright (c) 2011 Joshua Nussbaum, released under the New BSD License
