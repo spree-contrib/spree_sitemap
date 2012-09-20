@@ -4,5 +4,5 @@
 .DS_Store
 tmp
 *.swp
-spec/test_app
+spec/dummy
 pkg
