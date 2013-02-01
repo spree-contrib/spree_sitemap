@@ -25,7 +25,9 @@ module SpreeSitemapGenerator::SpreeDefaults
 
     add(products_path, options.merge(:lastmod => active_products.last_updated))
     active_products.each do |product|
-      add(product_path(product), options.merge(:lastmod => product.updated_at))
+      if product.on_display?
+        add(product_path(product), options.merge(:lastmod => product.updated_at))
+      end
     end 
   end 
 
