@@ -13,8 +13,8 @@ module SpreeSitemapGenerator
       ActiveRecord::Relation.class_eval do
         def last_updated
           last_update = order('updated_at DESC').first
-          last_update.try(:updated_at) 
-        end 
+          last_update.try(:updated_at)
+        end
       end
 
       ActiveRecord::Base.class_eval do
@@ -25,6 +25,9 @@ module SpreeSitemapGenerator
 
       require 'spree_sitemap_generator/spree_defaults'
       SitemapGenerator::Interpreter.send :include, SpreeSitemapGenerator::SpreeDefaults
+      if defined? SitemapGenerator::LinkSet
+        SitemapGenerator::LinkSet.send :include, SpreeSitemapGenerator::SpreeDefaults
+      end
 
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|
         Rails.application.config.cache_classes ? require(c) : load(c)
