@@ -1,6 +1,6 @@
-module SpreeSitemapGenerator
+module SpreeSitemap
   class Engine < Rails::Engine
-    engine_name 'spree_sitemap_generator'
+    engine_name 'spree_sitemap'
 
     config.autoload_paths += %W(#{config.root}/lib)
 
@@ -23,10 +23,10 @@ module SpreeSitemapGenerator
         end
       end
 
-      require 'spree_sitemap_generator/spree_defaults'
-      SitemapGenerator::Interpreter.send :include, SpreeSitemapGenerator::SpreeDefaults
+      require 'spree_sitemap/spree_defaults'
+      SitemapGenerator::Interpreter.send :include, SpreeSitemap::SpreeDefaults
       if defined? SitemapGenerator::LinkSet
-        SitemapGenerator::LinkSet.send :include, SpreeSitemapGenerator::SpreeDefaults
+        SitemapGenerator::LinkSet.send :include, SpreeSitemap::SpreeDefaults
       end
 
       Dir.glob(File.join(File.dirname(__FILE__), "../../app/**/*_decorator*.rb")) do |c|

@@ -1,4 +1,4 @@
-module SpreeSitemapGenerator::SpreeDefaults
+module SpreeSitemap::SpreeDefaults
   def default_url_options
     {:host => SitemapGenerator::Sitemap.default_host}
   end 

@@ -1,14 +1,14 @@
-Spree Sitemap Generator
-=====================
+Spree Sitemap
+=============
 
-Spree sitemap generator is a sitemap generator based on the sitemap_generator gem http://github.com/kjvarga/sitemap_generator. It adheres to the Sitemap 0.9 protocol specification.
+Spree Sitemap is a sitemap generator based on the sitemap_generator gem http://github.com/kjvarga/sitemap_generator. It adheres to the Sitemap 0.9 protocol specification.
 
 Installation
 =======
 
 1) add the gem to your `Gemfile`:
 
-`gem 'spree_sitemap_generator'`
+`gem 'spree_sitemap', github: 'jdutil/spree_sitemap'`
 
 2) run bundler:
 
@@ -16,7 +16,7 @@ Installation
 
 3) run the installer, it will create a `config/sitemap.rb` file with some sane defaults
 
-`rails generate spree_sitemap_generator:install`
+`rails g spree_sitemap:install`
 
 4) add sitemap to your `.gitignore`
 
@@ -55,8 +55,10 @@ Features
 - Thin wrapper over battle tested sitemap generator
 
 Special Thanks
-=====
+==============
+
+- Joshua Nussbaum's original implementation https://github.com/joshnuss/spree-sitemap-generator
 - The creators of the sitemap_generator gem
 - jackkinsella
 
-Copyright (c) 2011 Joshua Nussbaum, released under the New BSD License
+Copyright (c) 2013 Jeff Dutil, released under the New BSD License
