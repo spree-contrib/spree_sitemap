@@ -25,11 +25,9 @@ module SpreeSitemap::SpreeDefaults
 
     add(products_path, options.merge(:lastmod => active_products.last_updated))
     active_products.each do |product|
-      if product.on_display?
-        add(product_path(product), options.merge(:lastmod => product.updated_at))
-      end
-    end 
-  end 
+      add(product_path(product), options.merge(:lastmod => product.updated_at))
+    end
+  end
 
   def add_taxons(options={})
     Spree::Taxon.roots.each {|taxon| add_taxon(taxon, options) }

@@ -34,7 +34,6 @@ end
 
 `echo "Sitemap: http://www.example.com/sitemap_index.xml.gz" >> public/robots.txt`
 
-
 7) BOOM you're done!
 
 More Configuration Options
@@ -44,7 +43,8 @@ Check out the README for the sitemap_generator gem at:
 http://github.com/kjvarga/sitemap_generator
 
 Features
-=====
+========
+
 - Notifies search engine of new sitemaps (Google, Yahoo, Ask, Bing)
 - Supports large huge product catalogs
 - Adheres to 0.9 Sitemap protocol specification
@@ -54,11 +54,15 @@ Features
 - Supports Amazon S3 and other hosting services
 - Thin wrapper over battle tested sitemap generator
 
+TODO
+====
+
+- Add spec for sitemap rake task
+
 Special Thanks
 ==============
 
-- Joshua Nussbaum's original implementation https://github.com/joshnuss/spree-sitemap-generator
-- The creators of the sitemap_generator gem
-- jackkinsella
+- Joshua Nussbaum's original implementation of spree-sitemap-generator https://github.com/joshnuss/spree-sitemap-generator
+- The creators & contributors of the sitemap_generator http://github.com/kjvarga/sitemap_generator
 
-Copyright (c) 2013 Jeff Dutil, released under the New BSD License
+Copyright (c) 2013 Jeff Dutil, released under the New BSD License.
