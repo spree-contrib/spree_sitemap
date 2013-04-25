@@ -3,8 +3,26 @@ Spree Sitemap
 
 Spree Sitemap is a sitemap generator based on the sitemap_generator gem http://github.com/kjvarga/sitemap_generator. It adheres to the Sitemap 0.9 protocol specification.
 
+Features
+--------
+
+- Notifies search engine of new sitemaps (Google, Yahoo, Ask, Bing)
+- Supports large huge product catalogs
+- Adheres to 0.9 Sitemap protocol specification
+- Compresses sitemaps with gzip
+- Provides basic sitemap of a Spree site (products, taxons, login page, signup page)
+- Easily add additional sitemaps for pages you add to your spree site
+- Supports Amazon S3 and other hosting services
+- Thin wrapper over battle tested sitemap generator
+
+More Features & Configuration Options
+-------------------------------------
+
+Check out the README for the sitemap_generator gem at:
+[http://github.com/kjvarga/sitemap_generator](http://github.com/kjvarga/sitemap_generator)
+
 Installation
-=======
+------------
 
 1) add the gem to your `Gemfile`:
 
@@ -34,33 +52,13 @@ end
 
 `echo "Sitemap: http://www.example.com/sitemap_index.xml.gz" >> public/robots.txt`
 
-7) BOOM you're done!
-
-More Configuration Options
-==========================
-
-Check out the README for the sitemap_generator gem at:
-http://github.com/kjvarga/sitemap_generator
-
-Features
-========
-
-- Notifies search engine of new sitemaps (Google, Yahoo, Ask, Bing)
-- Supports large huge product catalogs
-- Adheres to 0.9 Sitemap protocol specification
-- Compresses sitemaps with gzip
-- Provides basic sitemap of a Spree site (products, taxons, login page, signup page)
-- Easily add additional sitemaps for pages you add to your spree site
-- Supports Amazon S3 and other hosting services
-- Thin wrapper over battle tested sitemap generator
-
 TODO
-====
+----
 
 - Add spec for sitemap rake task
 
-Special Thanks
-==============
+Thanks
+------
 
 - The creators & contributors of sitemap_generator http://github.com/kjvarga/sitemap_generator/contributors
 - Joshua Nussbaum's original implementation of spree-sitemap-generator https://github.com/joshnuss/spree-sitemap-generator
