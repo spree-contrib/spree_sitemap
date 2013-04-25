@@ -15,8 +15,8 @@ Features
 - Supports Amazon S3 and other hosting services
 - Thin wrapper over battle tested sitemap generator
 
-More Features & Configuration Options
--------------------------------------
+Configuration Options
+---------------------
 
 Check out the README for the sitemap_generator gem at:
 [http://github.com/kjvarga/sitemap_generator](http://github.com/kjvarga/sitemap_generator)
@@ -71,14 +71,14 @@ In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.htm
 Here are some ways *you* can contribute:
 
 * by using prerelease versions
-* by reporting [bugs](https://github.com/jdutil/spree_drop_ship/issues)
+* by reporting [bugs](https://github.com/jdutil/spree_sitemap/issues)
 * by suggesting new features
-* by [translating to a new language](https://github.com/jdutil/spree_drop_ship/tree/master/config/locales)
+* by [translating to a new language](https://github.com/jdutil/spree_sitemap/tree/master/config/locales)
 * by writing or editing documentation
 * by writing specifications
 * by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
 * by refactoring code
-* by resolving [issues](https://github.com/jdutil/spree_drop_ship/issues)
+* by resolving [issues](https://github.com/jdutil/spree_sitemap/issues)
 * by reviewing patches
 
 Donating
