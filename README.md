@@ -62,7 +62,30 @@ TODO
 Special Thanks
 ==============
 
+- The creators & contributors of sitemap_generator http://github.com/kjvarga/sitemap_generator/contributors
 - Joshua Nussbaum's original implementation of spree-sitemap-generator https://github.com/joshnuss/spree-sitemap-generator
-- The creators & contributors of the sitemap_generator http://github.com/kjvarga/sitemap_generator
+
+Contributing
+------------
+
+In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help improve this project.
+
+Here are some ways *you* can contribute:
+
+* by using prerelease versions
+* by reporting [bugs](https://github.com/jdutil/spree_drop_ship/issues)
+* by suggesting new features
+* by [translating to a new language](https://github.com/jdutil/spree_drop_ship/tree/master/config/locales)
+* by writing or editing documentation
+* by writing specifications
+* by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
+* by refactoring code
+* by resolving [issues](https://github.com/jdutil/spree_drop_ship/issues)
+* by reviewing patches
+
+Donating
+--------
+
+Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5
 
 Copyright (c) 2013 Jeff Dutil, released under the New BSD License.

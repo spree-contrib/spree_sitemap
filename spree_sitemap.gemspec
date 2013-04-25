@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
 
   s.author            = ['Jeff Dutil']
   s.email             = ['jdutil@burlingtonwebapps.com']
-  # s.homepage          = 'http://www.rubyonrails.org'
+  s.homepage          = 'https://github.com/jdutil/spree_sitemap'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- {test,spec,features}/*`.split("\n")
