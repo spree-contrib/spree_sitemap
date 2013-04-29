@@ -6,3 +6,4 @@ tmp
 *.swp
 spec/dummy
 pkg
+Gemfile.lock
