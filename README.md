@@ -50,7 +50,7 @@ end
 
 6) make sure crawlers can find the sitemap, by adding the following line to your `public/robots.txt` with your correct domain name
 
-`echo "Sitemap: http://www.example.com/sitemap_index.xml.gz" >> public/robots.txt`
+`echo "Sitemap: http://www.example.com/sitemap.xml.gz" >> public/robots.txt`
 
 TODO
 ----
