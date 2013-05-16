@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.description = 'Provides a sitemap file for Spree'
   s.required_ruby_version = '>= 1.9.3'
 
-  s.author            = ['Jeff Dutil']
-  s.email             = ['jdutil@burlingtonwebapps.com']
+  s.author            = 'Jeff Dutil'
+  s.email             = 'jdutil@burlingtonwebapps.com'
   s.homepage          = 'https://github.com/jdutil/spree_sitemap'
 
   s.files        = `git ls-files`.split("\n")
