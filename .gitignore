@@ -7,3 +7,4 @@ tmp
 spec/dummy
 pkg
 Gemfile.lock
+coverage
