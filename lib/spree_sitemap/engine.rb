@@ -12,7 +12,7 @@ module SpreeSitemap
     def self.activate
       ActiveRecord::Relation.class_eval do
         def last_updated
-          last_update = order('updated_at DESC').first
+          last_update = order('spree_products.updated_at DESC').first
           last_update.try(:updated_at)
         end
       end
