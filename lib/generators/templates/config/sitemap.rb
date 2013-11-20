@@ -1,5 +1,24 @@
 SitemapGenerator::Sitemap.default_host = "http://#{Spree::Config[:site_url]}"
 
+##
+## If using Heroku or similar service where you want sitemaps to live in S3 you'll need to setup these settings.
+##
+
+## Pick a place safe to write the files
+# SitemapGenerator::Sitemap.public_path = 'tmp/'
+
+## Store on S3 using Fog - Note must add fog to your Gemfile.
+# SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new({aws_access_key_id:     Spree::Config[:s3_access_key], 
+#                                                                     aws_secret_access_key: Spree::Config[:s3_secret], 
+#                                                                     fog_provider:          'AWS',
+#                                                                     fog_directory: Spree::Config[:s3_bucket]})
+
+## Inform the map cross-linking where to find the other maps.
+# SitemapGenerator::Sitemap.sitemaps_host = "http://#{Spree::Config[:s3_bucket]}.s3.amazonaws.com/"
+
+## Pick a namespace within your bucket to organize your maps. Note you'll need to set this directory to be public.
+# SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+
 SitemapGenerator::Sitemap.add_links do
   # Put links creation logic here.
   #
