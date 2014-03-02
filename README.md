@@ -1,7 +1,10 @@
 Spree Sitemap
 =============
 
-Spree Sitemap is a sitemap generator based on the sitemap_generator gem http://github.com/kjvarga/sitemap_generator. It adheres to the Sitemap 0.9 protocol specification.
+[![Build Status](https://travis-ci.org/jdutil/spree_sitemap.png?branch=master)](https://travis-ci.org/jdutil/spree_sitemap)
+[![Code Climate](https://codeclimate.com/github/jdutil/spree_sitemap.png)](https://codeclimate.com/github/jdutil/spree_sitemap)
+
+Spree Sitemap is a sitemap generator based on the [sitemap_generator][1] gem. It adheres to the Sitemap 0.9 protocol specification.
 
 Features
 --------
@@ -18,15 +21,15 @@ Features
 Configuration Options
 ---------------------
 
-Check out the README for the sitemap_generator gem at:
-[http://github.com/kjvarga/sitemap_generator](http://github.com/kjvarga/sitemap_generator)
+Check out the [README][1] for the [sitemap_generator][1].
 
 Installation
 ------------
 
 1) add the gem to your `Gemfile`:
-
-`gem 'spree_sitemap', github: 'jdutil/spree_sitemap'`
+```ruby
+gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: 'master'
+```
 
 2) run bundler:
 
@@ -41,10 +44,9 @@ Installation
 `echo "public/sitemap*" >> .gitignore`
 
 5) setup a daily cron job to regenrate your sitemap via the `rake sitemap:refresh` task. If you use the Whenever gem, add this to your `config/schedule.rb`
-
-```
-every 1.day, :at => '5:00 am' do
-  rake "-s sitemap:refresh"
+```ruby
+every 1.day, at: '5:00 am' do
+  rake '-s sitemap:refresh'
 end
 ```
 
@@ -60,25 +62,24 @@ TODO
 Thanks
 ------
 
-- The creators & contributors of sitemap_generator http://github.com/kjvarga/sitemap_generator/contributors
-- Joshua Nussbaum's original implementation of spree-sitemap-generator https://github.com/joshnuss/spree-sitemap-generator
+- [The creators & contributors of sitemap_generator](http://github.com/kjvarga/sitemap_generator/contributors)
+- [Joshua Nussbaum's original implementation of spree-sitemap-generator](https://github.com/joshnuss/spree-sitemap-generator)
 
 Contributing
 ------------
 
-In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help improve this project.
+In the spirit of [free software][2], **everyone** is encouraged to help improve this project.
 
 Here are some ways *you* can contribute:
 
 * by using prerelease versions
-* by reporting [bugs](https://github.com/jdutil/spree_sitemap/issues)
+* by reporting [bugs][3]
 * by suggesting new features
-* by [translating to a new language](https://github.com/jdutil/spree_sitemap/tree/master/config/locales)
 * by writing or editing documentation
 * by writing specifications
 * by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
 * by refactoring code
-* by resolving [issues](https://github.com/jdutil/spree_sitemap/issues)
+* by resolving [issues][3]
 * by reviewing patches
 
 Donating
@@ -86,4 +87,11 @@ Donating
 
 Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5
 
-Copyright (c) 2013 Jeff Dutil, released under the New BSD License.
+Copyright (c) 2014 [Jeff Dutil][5] and [contributors][6], released under the [New BSD License][4].
+
+[1]: http://github.com/kjvarga/sitemap_generator
+[2]: http://www.fsf.org/licensing/essays/free-sw.html
+[3]: https://github.com/jdutil/spree_sitemap/issues
+[4]: https://github.com/jdutil/spree_sitemap/blob/master/LICENSE.md
+[5]: https://github.com/jdutil
+[6]: https://github.com/jdutil/spree_sitemap/graphs/contributors
