@@ -1,7 +1,7 @@
 module SpreeSitemap::SpreeDefaults
   def default_url_options
     {:host => SitemapGenerator::Sitemap.default_host}
-  end 
+  end
   include Spree::Core::Engine.routes.url_helpers
 
   def add_login(options={})
