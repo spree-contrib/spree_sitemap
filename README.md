@@ -1,7 +1,7 @@
 Spree Sitemap
 =============
 
-[![Build Status](https://travis-ci.org/jdutil/spree_sitemap.png?branch=master)](https://travis-ci.org/jdutil/spree_sitemap)
+[![Build Status](https://travis-ci.org/JDutil/spree_sitemap.png?branch=master)](https://travis-ci.org/JDutil/spree_sitemap)
 [![Code Climate](https://codeclimate.com/github/jdutil/spree_sitemap.png)](https://codeclimate.com/github/jdutil/spree_sitemap)
 
 Spree Sitemap is a sitemap generator based on the [sitemap_generator][1] gem. It adheres to the Sitemap 0.9 protocol specification.
