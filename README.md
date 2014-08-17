@@ -28,7 +28,7 @@ Installation
 
 1) add the gem to your `Gemfile`:
 ```ruby
-gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: 'master'
+gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: '2-3-stable'
 ```
 
 2) run bundler:
@@ -53,6 +53,11 @@ end
 6) make sure crawlers can find the sitemap, by adding the following line to your `public/robots.txt` with your correct domain name
 
 `echo "Sitemap: http://www.example.com/sitemap.xml.gz" >> public/robots.txt`
+
+Notes
+-----
+`public/robots.txt` might include a disallow entry for `/account`
+You might want to comment out `add_account` in `config/sitemap.rb`
 
 TODO
 ----
