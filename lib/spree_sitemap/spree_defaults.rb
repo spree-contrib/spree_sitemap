@@ -22,23 +22,27 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_products(options={})
-    active_products = Spree::Product.active
+    active_products = Spree::Product.active.uniq
 
     add(products_path, options.merge(:lastmod => active_products.last_updated))
     active_products.each do |product|
-      opts = options.merge(:lastmod => product.updated_at)
-
-      if gem_available?('spree_videos') && product.videos.present?
-        # TODO add exclusion list configuration option
-        # https://sites.google.com/site/webmasterhelpforum/en/faq-video-sitemaps#multiple-pages
-
-        # don't include all the videos on the page to avoid duplicate title warnings
-        primary_video = product.videos.first
-        opts.merge!(:video => [video_options(primary_video.youtube_ref, product)])
-      end
-
-      add(product_path(product), opts)
+      add_product(product, options)
     end
+  end
+
+  def add_product(product, options={})
+    opts = options.merge(:lastmod => product.updated_at)
+
+    if gem_available?('spree_videos') && product.videos.present?
+      # TODO add exclusion list configuration option
+      # https://sites.google.com/site/webmasterhelpforum/en/faq-video-sitemaps#multiple-pages
+
+      # don't include all the videos on the page to avoid duplicate title warnings
+      primary_video = product.videos.first
+      opts.merge!(:video => [video_options(primary_video.youtube_ref, product)])
+    end
+
+    add(product_path(product), opts)
   end
 
   def add_pages(options={})
