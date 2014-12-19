@@ -21,14 +21,23 @@ module SpreeSitemap::SpreeDefaults
     add(new_spree_user_password_path, options)
   end
 
-  def add_products(options={})
-    active_products = Spree::Product.active.uniq
-
-    add(products_path, options.merge(:lastmod => active_products.last_updated))
-    active_products.each do |product|
-      add_product(product, options)
+  def add_suites(options={})
+    suites = Spree::Suite.active.uniq
+    suites.each do |suite|
+      suite.tabs.each do |tab|
+        add(suite_path(id: suite.permalink, tab: tab.tab_type), options)
+      end
     end
   end
+
+#  def add_products(options={})
+#    active_products = Spree::Product.active.uniq
+#
+#    add(products_path, options.merge(:lastmod => active_products.last_updated))
+#    active_products.each do |product|
+#      add_product(product, options)
+#    end
+#  end
 
   def add_product(product, options={})
     opts = options.merge(:lastmod => product.updated_at)
@@ -62,7 +71,8 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_taxon(taxon, options={})
-    add(nested_taxons_path(taxon.permalink), options.merge(:lastmod => taxon.products.last_updated))
+    last_updated = taxon.suites.order(:updated_at).last.updated_at
+    add(nested_taxons_path(taxon.permalink), options.merge(:lastmod => last_updated))
     taxon.children.each {|child| add_taxon(child, options) }
   end
 
