@@ -71,7 +71,8 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_taxon(taxon, options={})
-    last_updated = taxon.suites.order(:updated_at).last.updated_at
+    suite = taxon.suites.order(:updated_at).last
+    last_updated = suite ? suite.updated_at :  taxon.updated_at
     add(nested_taxons_path(taxon.permalink), options.merge(:lastmod => last_updated))
     taxon.children.each {|child| add_taxon(child, options) }
   end
