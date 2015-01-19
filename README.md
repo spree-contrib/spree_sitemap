@@ -28,7 +28,7 @@ Installation
 
 1) add the gem to your `Gemfile`:
 ```ruby
-gem 'spree_sitemap', github: 'jdutil/spree_sitemap', branch: 'master'
+gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: 'master'
 ```
 
 2) run bundler:
