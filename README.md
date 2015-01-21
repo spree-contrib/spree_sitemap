@@ -1,13 +1,11 @@
-Spree Sitemap
-=============
+# Spree Sitemap
 
-[![Build Status](https://travis-ci.org/spree-contrib/spree_sitemap.png?branch=master)](https://travis-ci.org/spree-contrib/spree_sitemap)
-[![Code Climate](https://codeclimate.com/github/jdutil/spree_sitemap.png)](https://codeclimate.com/github/jdutil/spree_sitemap)
+[![Build Status](https://travis-ci.org/spree-contrib/spree_sitemap.svg?branch=master)](https://travis-ci.org/spree-contrib/spree_sitemap)
+[![Code Climate](https://codeclimate.com/github/spree-contrib/spree_sitemap/badges/gpa.svg)](https://codeclimate.com/github/spree-contrib/spree_sitemap)
 
 Spree Sitemap is a sitemap generator based on the [sitemap_generator][1] gem. It adheres to the Sitemap 0.9 protocol specification.
 
-Features
---------
+### Features
 
 - Notifies search engine of new sitemaps (Google, Yahoo, Ask, Bing)
 - Supports large huge product catalogs
@@ -18,13 +16,13 @@ Features
 - Supports Amazon S3 and other hosting services
 - Thin wrapper over battle tested sitemap generator
 
-Configuration Options
----------------------
+### Configuration Options
 
 Check out the [README][1] for the [sitemap_generator][1].
 
-Installation
-------------
+---
+
+## Installation
 
 1) add the gem to your `Gemfile`:
 ```ruby
@@ -54,44 +52,27 @@ end
 
 `echo "Sitemap: http://www.example.com/sitemap.xml.gz" >> public/robots.txt`
 
-TODO
-----
-
-- Add spec for sitemap rake task
-
-Thanks
-------
+**Thanks**
 
 - [The creators & contributors of sitemap_generator](http://github.com/kjvarga/sitemap_generator/contributors)
 - [Joshua Nussbaum's original implementation of spree-sitemap-generator](https://github.com/joshnuss/spree-sitemap-generator)
 
-Contributing
-------------
+**Donations**
 
-In the spirit of [free software][2], **everyone** is encouraged to help improve this project.
+_Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5_
 
-Here are some ways *you* can contribute:
+---
 
-* by using prerelease versions
-* by reporting [bugs][3]
-* by suggesting new features
-* by writing or editing documentation
-* by writing specifications
-* by writing code (*no patch is too small*: fix typos, add comments, clean up inconsistent whitespace)
-* by refactoring code
-* by resolving [issues][3]
-* by reviewing patches
+## Contributing
 
-Donating
---------
+See corresponding [guidelines][2]
 
-Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5
+---
 
 Copyright (c) 2011-2015 [Jeff Dutil][5] and other [contributors][6], released under the [New BSD License][4].
 
 [1]: http://github.com/kjvarga/sitemap_generator
-[2]: http://www.fsf.org/licensing/essays/free-sw.html
-[3]: https://github.com/jdutil/spree_sitemap/issues
-[4]: https://github.com/jdutil/spree_sitemap/blob/master/LICENSE.md
+[2]: https://github.com/spree-contrib/spree_i18n/blob/master/CONTRIBUTING.md
+[4]: https://github.com/spree-contrib/spree_sitemap/blob/master/LICENSE.md
 [5]: https://github.com/jdutil
-[6]: https://github.com/jdutil/spree_sitemap/graphs/contributors
+[6]: https://github.com/spree-contrib/spree_sitemap/graphs/contributors
