@@ -87,7 +87,7 @@ Donating
 
 Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5
 
-Copyright (c) 2014 [Jeff Dutil][5] and [contributors][6], released under the [New BSD License][4].
+Copyright (c) 2011-2015 [Jeff Dutil][5] and other [contributors][6], released under the [New BSD License][4].
 
 [1]: http://github.com/kjvarga/sitemap_generator
 [2]: http://www.fsf.org/licensing/essays/free-sw.html

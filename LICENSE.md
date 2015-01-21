@@ -1,4 +1,4 @@
-Copyright (c) 2014 Jeff Dutil
+Copyright (c) 2011-2015 Jeff Dutil and other contributors
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification,
