@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.version     = '2.0.0.beta'
   s.summary     = 'Provides a sitemap file for Spree'
   s.description = s.summary
-  s.required_ruby_version = '>= 1.9.3'
+  s.required_ruby_version = '>= 2.1.0'
 
   s.author            = 'Jeff Dutil'
   s.email             = 'jdutil@burlingtonwebapps.com'
