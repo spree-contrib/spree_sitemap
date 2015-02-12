@@ -14,14 +14,14 @@ Gem::Specification.new do |s|
 
   s.author            = 'Jeff Dutil'
   s.email             = 'jdutil@burlingtonwebapps.com'
-  s.homepage          = 'https://github.com/jdutil/spree_sitemap'
+  s.homepage          = 'https://github.com/spree-contrib/spree_sitemap'
 
   s.files        = `git ls-files`.split("\n")
   s.test_files   = `git ls-files -- spec/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_runtime_dependency 'spree_core', '~> 3.0.0.beta'
+  s.add_runtime_dependency 'spree_core', '~> 3.1.0.beta'
   s.add_runtime_dependency 'sitemap_generator', '~> 4.3.1'
 
   s.add_development_dependency 'database_cleaner', '~> 1.3.0'
