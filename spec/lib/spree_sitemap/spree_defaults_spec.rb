@@ -27,6 +27,18 @@ RSpec.describe SpreeSitemap::SpreeDefaults do
     end
   end
 
+  context '.gem_available?' do
+    it 'verifies that gem is available' do
+      expect(subject.gem_available?('rspec-rails')).to be_truthy
+    end
+
+    context 'when there is no such gem' do
+      it 'returns false' do
+        expect(subject.gem_available?('fake_spree_gem_name')).to be false
+      end
+    end
+  end
+
   skip '.add_login(options = {})'
   skip '.add_signup(options = {})'
   skip '.add_account(options = {})'

@@ -1,6 +1,6 @@
 module SpreeSitemap::SpreeDefaults
   include Spree::Core::Engine.routes.url_helpers
-  include Spree::BaseHelper # for gem_available? + meta_data
+  include Spree::BaseHelper # for meta_data
 
   def default_url_options
     { host: SitemapGenerator::Sitemap.default_host }
@@ -65,6 +65,14 @@ module SpreeSitemap::SpreeDefaults
   def add_taxon(taxon, options = {})
     add(nested_taxons_path(taxon.permalink), options.merge(lastmod: taxon.products.last_updated))
     taxon.children.each { |child| add_taxon(child, options) }
+  end
+
+  def gem_available?(name)
+    Gem::Specification.find_by_name(name)
+  rescue Gem::LoadError
+    false
+  rescue
+    Gem.available?(name)
   end
 
   private
