@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_runtime_dependency 'spree_core', '~> 3.1.0.beta'
-  s.add_runtime_dependency 'sitemap_generator', '~> 4.3.1'
+  s.add_runtime_dependency 'sitemap_generator', '~> 5.0'
 
   s.add_development_dependency 'database_cleaner', '~> 1.4.0'
   s.add_development_dependency 'factory_girl', '~> 4.4'
