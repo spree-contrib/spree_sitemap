@@ -63,6 +63,24 @@ _Bitcoin donations may be sent to: 18HEAFjeDaa15AihyGvKvR19XEkm5aCJk5_
 
 ---
 
+## Upgrading
+
+If you upgrade from early versions of `spree_sitemap` you need to change your sitemaps from:
+```ruby
+SitemapGenerator::Sitemap.add_links do
+  # ...
+end
+```
+
+to this:
+```ruby
+SitemapGenerator::Sitemap.create do
+  # ...
+end
+```
+
+---
+
 ## Contributing
 
 See corresponding [guidelines][2]
