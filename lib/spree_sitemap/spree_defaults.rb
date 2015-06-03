@@ -63,7 +63,7 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_taxon(taxon, options = {})
-    add(nested_taxons_path(taxon.permalink), options.merge(lastmod: taxon.products.last_updated))
+    add(nested_taxons_path(taxon.permalink), options.merge(lastmod: taxon.products.last_updated)) if taxon.permalink.present?
     taxon.children.each { |child| add_taxon(child, options) }
   end
 
