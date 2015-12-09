@@ -22,10 +22,14 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_suites(options={})
-    suites = Spree::Suite.active.uniq
+    # Temp soloution, this needs to be changed back to Suite once 
+    # Layon's reafactorings has been done
+    #suites = Spree::Suite.active.uniq
+    suites = Spree::IndexPageItem.active.uniq
     suites.each do |suite|
       suite.tabs.each do |tab|
-        add(suite_path(id: suite.permalink, tab: tab.tab_type), options)
+        #add(suite_path(id: suite.permalink, tab: tab.tab_type), options)
+        add(index_page_item_path(id: suite.permalink, tab: tab.tab_type), options)
       end
     end
   end
@@ -71,8 +75,9 @@ module SpreeSitemap::SpreeDefaults
   end
 
   def add_taxon(taxon, options={})
-    suite = taxon.suites.order(:updated_at).last
-    last_updated = suite ? suite.updated_at :  taxon.updated_at
+    #suite = taxon.suites.order(:updated_at).last
+    item = taxon.index_page_items.order(:updated_at).last
+    last_updated = item ? item.updated_at :  taxon.updated_at
     add(nested_taxons_path(taxon.permalink), options.merge(:lastmod => last_updated))
     taxon.children.each {|child| add_taxon(child, options) }
   end
