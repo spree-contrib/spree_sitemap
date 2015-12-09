@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_sitemap'
-  s.version     = '2.0.0.beta'
+  s.version     = '2.0.1.beta'
   s.summary     = 'Provides a sitemap file for Spree'
   s.description = s.summary
   s.required_ruby_version = '>= 1.9.3'
