@@ -75,6 +75,10 @@ module SpreeSitemap::SpreeDefaults
     Gem.available?(name)
   end
 
+  def main_app
+    Rails.application.routes.url_helpers
+  end
+
   private
 
   ##

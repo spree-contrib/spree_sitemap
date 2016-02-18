@@ -33,4 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'rubocop', '>= 0.24.1'
+  s.add_development_dependency 'coffee-script', '~> 2.4.1'
 end

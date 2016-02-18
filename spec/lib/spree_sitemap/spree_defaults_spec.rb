@@ -39,6 +39,12 @@ RSpec.describe SpreeSitemap::SpreeDefaults do
     end
   end
 
+  describe '.main_app' do
+    context 'returns the url helpers module for the application' do
+      it { expect(subject.main_app).to respond_to(:url_for, :spree_path, :_routes) }
+    end
+  end
+
   skip '.add_login(options = {})'
   skip '.add_signup(options = {})'
   skip '.add_account(options = {})'
