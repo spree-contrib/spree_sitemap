@@ -8,10 +8,10 @@ module SpreeSitemap
   end
 
   module VERSION
-    MAJOR = 2
+    MAJOR = 3
     MINOR = 0
-    TINY  = 0
-    PRE   = 'beta'
+    TINY  = 5
+    PRE   = nil
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
