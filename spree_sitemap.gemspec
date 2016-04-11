@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_runtime_dependency 'spree_core', '~> 3.1.0.beta'
+  s.add_runtime_dependency 'spree_core', '~> 3.2.0.alpha'
   s.add_runtime_dependency 'sitemap_generator', '~> 5.1.0'
 
   s.add_development_dependency 'database_cleaner', '~> 1.4.0'
