@@ -26,7 +26,7 @@ module SpreeSitemap::SpreeDefaults
     active_products = Spree::Product.active.uniq
 
     add(products_path, options.merge(lastmod: active_products.last_updated))
-    active_products.each do |product|
+    active_products.find_each do |product|
       add_product(product, options)
     end
   end
