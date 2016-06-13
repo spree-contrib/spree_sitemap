@@ -24,33 +24,44 @@ Check out the [README][1] for the [sitemap_generator][1].
 
 ## Installation
 
-1) add the gem to your `Gemfile`:
-```ruby
-gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: 'master'
-```
+1. Add this extension to your Gemfile with this line:
+  ```ruby
+  gem 'spree_sitemap', github: 'spree-contrib/spree_sitemap', branch: 'X-X-stable'
+  ```
 
-2) run bundler:
+  The `branch` option is important: it must match the version of Spree you're using.
+  For example, use `3-0-stable` if you're using Spree `3-0-stable` or any `3.0.x` version.
 
-`bundle install`
+2. Install the gem using Bundler:
+  ```ruby
+  bundle install
+  ```
 
-3) run the installer, it will create a `config/sitemap.rb` file with some sane defaults
+3. Copy & run migrations
+  ```ruby
+  bundle exec rails g spree_sitemap:install
+  ```
 
-`rails g spree_sitemap:install`
+4. Restart your server
 
-4) add sitemap to your `.gitignore`
+  If your server was running, restart it so that it can find the assets properly.
 
-`echo "public/sitemap*" >> .gitignore`
+5. Add sitemap to your `.gitignore`
 
-5) setup a daily cron job to regenrate your sitemap via the `rake sitemap:refresh` task. If you use the Whenever gem, add this to your `config/schedule.rb`
-```ruby
-every 1.day, at: '5:00 am' do
-  rake '-s sitemap:refresh'
-end
-```
+  `echo "public/sitemap*" >> .gitignore`
 
-6) make sure crawlers can find the sitemap, by adding the following line to your `public/robots.txt` with your correct domain name
+6. Setup a daily cron job to regenrate your sitemap via the `rake sitemap:refresh` task. If you use the Whenever gem, add this to your `config/schedule.rb`
 
-`echo "Sitemap: http://www.example.com/sitemap.xml.gz" >> public/robots.txt`
+  ```ruby
+  every 1.day, at: '5:00 am' do
+    rake '-s sitemap:refresh'
+  end
+  ```  
+
+7. make sure crawlers can find the sitemap, by adding the following line to your `public/robots.txt` with your correct domain name
+
+  `echo "Sitemap: http://www.example.com/sitemap.xml.gz" >> public/robots.txt`
+
 
 **Thanks**
 
