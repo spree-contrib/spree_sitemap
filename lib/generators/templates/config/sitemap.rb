@@ -19,7 +19,7 @@ SitemapGenerator::Sitemap.default_host = "http://#{Spree::Store.default.url}"
 ## Pick a namespace within your bucket to organize your maps. Note you'll need to set this directory to be public.
 # SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 
-SitemapGenerator::Sitemap.add_links do
+SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
   #
   # The root path '/' and sitemap index file are added automatically.
