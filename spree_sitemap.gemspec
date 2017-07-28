@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
 
   spree_version = '>= 3.1.0', '< 4.0'
   s.add_runtime_dependency 'spree_core', spree_version
+  s.add_runtime_dependency 'spree_extension'
   s.add_runtime_dependency 'sitemap_generator'
 
   s.add_development_dependency 'database_cleaner'
