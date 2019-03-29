@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  spree_version = '>= 3.1.0', '< 4.0'
+  spree_version = '>= 3.1.0', '< 5.0'
   s.add_runtime_dependency 'spree_core', spree_version
   s.add_runtime_dependency 'spree_extension'
   s.add_runtime_dependency 'sitemap_generator'
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'factory_bot', '~> 4.7'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'sqlite3', '~> 1.3.6'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'pry-rails'
